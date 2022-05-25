@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RpcController {
 
     @PostMapping(value="/*")
+
     public DemoDTO hello() {
         DemoDTO demoDTO = new DemoDTO();
         demoDTO.setName("hou1");
