@@ -1,12 +1,9 @@
 package com.example.demo.api;
 
 import com.example.demo.api.dto.DemoDTO;
-import com.example.demo.common.util.TemplateNetWorkUtil;
-import org.apache.http.annotation.Obsolete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
