@@ -1,4 +1,4 @@
-package com.example.demo.api;
+package com.example.demo.service.api.test;
 
 import com.example.demo.common.util.TemplateNetWorkUtil;
 import org.springframework.beans.factory.annotation.Autowired;

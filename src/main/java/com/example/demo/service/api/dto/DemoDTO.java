@@ -1,4 +1,4 @@
-package com.example.demo.api.dto;
+package com.example.demo.service.api.dto;
 
 import java.io.Serializable;
 

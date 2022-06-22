@@ -22,6 +22,8 @@ import java.util.Map;
 @Component
 public class TemplateNetWorkUtil {
 
+    public static final String HTTP_PREFIX = "http://";
+    public static final String SEPARATOR = "/";
     @Autowired
     private RestTemplate restTemplate;
 
@@ -32,7 +34,7 @@ public class TemplateNetWorkUtil {
         return new RestTemplate();
     }
     public <T> T executeGet(String serviceName,String api,Class<T> response) {
-        String url = "http://"+serviceName+"/"+api;
+        String url = HTTP_PREFIX+serviceName+"/"+api;
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> formEntity = new HttpEntity<String>(null, headers);
         ResponseEntity<T> exchange = restTemplate.exchange(url, HttpMethod.GET, formEntity, response, new HashMap<>());
@@ -41,7 +43,7 @@ public class TemplateNetWorkUtil {
     }
 
     public <T> T executeGet(String serviceName,String api,Class<T> response, Map<String,String> uriValues) {
-        String url = "http://"+serviceName+"/"+api + this.getUriValues(uriValues);
+        String url = HTTP_PREFIX+serviceName+SEPARATOR+api + this.getUriValues(uriValues);
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> formEntity = new HttpEntity<String>(null, headers);
         ResponseEntity<T> exchange = restTemplate.exchange(url, HttpMethod.GET, formEntity, response, uriValues);
@@ -62,7 +64,7 @@ public class TemplateNetWorkUtil {
     }
 
     public <T> T executePost(String serviceName,String api,Class<T> response,Map<String,String> uriValues) {
-        String url = "http://"+serviceName+"/"+api;
+        String url = HTTP_PREFIX +serviceName+"/"+api;
         MultiValueMap<String, String> requestBody = new LinkedMultiValueMap<>();
         uriValues.forEach((key,value)->{
             requestBody.add(key, value);

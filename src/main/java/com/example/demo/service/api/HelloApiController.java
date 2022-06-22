@@ -1,26 +1,24 @@
-package com.example.demo.api;
+package com.example.demo.service.api;
 
-import com.example.demo.api.dto.DemoDTO;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.demo.service.api.dto.DemoDTO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-
 @RestController
 @RequestMapping("/hello")
 @RefreshScope
-public class HelloApiService {
+public class HelloApiController {
+
+    private static final Logger logger = LoggerFactory.getLogger(HelloApiController.class);
 
     @Value("${name}")
     private String name;
 
     @Value("${name2}")
     private String name2;
-
-    @Autowired
-    private HttpServletRequest request;
 
     @PostMapping(value="/test")
     public DemoDTO hello() {
@@ -37,6 +35,15 @@ public class HelloApiService {
         demoDTO.setName("hou");
         System.out.println(name);
         return "hou:"+key;
+    }
+
+    @PostMapping(value="/test3")
+    public String hello3(@RequestParam("name") String name,@RequestParam("va")String va) {
+        DemoDTO demoDTO = new DemoDTO();
+        demoDTO.setName("hou");
+        System.out.println(name);
+        logger.info("test-log");
+        return "hou@"+name+"@"+va;
     }
 
     @PostMapping(value="/test21")
