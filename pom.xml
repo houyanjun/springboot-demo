@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project [
+		<!ELEMENT project (modelVersion|parent|groupId|artifactId|version|name|description|properties|dependencies|build|repositories|pluginRepositories)*>
+		<!ATTLIST project
+				xmlns CDATA #REQUIRED
+				xmlns:xsi CDATA #REQUIRED
+				xsi:schemaLocation CDATA #REQUIRED>
+		<!ELEMENT modelVersion (#PCDATA)>
+		<!ELEMENT parent (groupId|artifactId|version|relativePath)*>
+		<!ELEMENT groupId (#PCDATA)>
+		<!ELEMENT artifactId (#PCDATA)>
+		<!ELEMENT version (#PCDATA)>
+		<!ELEMENT relativePath (#PCDATA)>
+		<!ELEMENT name (#PCDATA)>
+		<!ELEMENT description (#PCDATA)>
+		<!ELEMENT properties (java.version|latest.version|cloud.version|openfeign.verison)*>
+		<!ELEMENT java.version (#PCDATA)>
+		<!ELEMENT latest.version (#PCDATA)>
+		<!ELEMENT cloud.version (#PCDATA)>
+		<!ELEMENT openfeign.verison (#PCDATA)>
+		<!ELEMENT dependencies (dependency)*>
+		<!ELEMENT dependency (groupId|artifactId|version|scope|exclusions)*>
+		<!ELEMENT scope (#PCDATA)>
+		<!ELEMENT exclusions (exclusion)*>
+		<!ELEMENT exclusion (groupId|artifactId)*>
+		<!ELEMENT build (#PCDATA)>
+		<!ELEMENT repositories (repository)*>
+		<!ELEMENT repository (id|name|url|snapshots|releases)*>
+		<!ELEMENT id (#PCDATA)>
+		<!ELEMENT url (#PCDATA)>
+		<!ELEMENT snapshots (enabled)*>
+		<!ELEMENT enabled (#PCDATA)>
+		<!ELEMENT releases (enabled)*>
+		<!ELEMENT pluginRepositories (pluginRepository)*>
+		<!ELEMENT pluginRepository (id|name|url|snapshots|releases)*>
+		]>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -90,10 +125,45 @@
 			<version>1.2.3</version>
 		</dependency>
 		<!--springboot 2.4版本后必须指定环境变量 spring.cloud.bootstrap.enabled=true，才能启用bootstrap.properties-->
-
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.19</version>
+		</dependency>
+		<!--mybatis-plus-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<!--mybatis和SpringBoot整合包-->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.6.4</version>
+			</plugin>
+			<!-- mybatis generator 自动生成代码插件 -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.2</version>
+				<configuration>
+					<configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml
+					</configurationFile>
+					<overwrite>true</overwrite>
+					<verbose>true</verbose>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 	<repositories>
 		<repository>
