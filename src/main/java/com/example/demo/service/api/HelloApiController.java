@@ -1,8 +1,10 @@
 package com.example.demo.service.api;
 
 import com.example.demo.service.api.dto.DemoDTO;
+import com.example.demo.service.biz.BlogUserBizService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +22,9 @@ public class HelloApiController {
     @Value("${name2}")
     private String name2;
 
+    @Autowired
+    private BlogUserBizService blogUserBizService;
+
     @PostMapping(value="/test")
     public DemoDTO hello() {
         DemoDTO demoDTO = new DemoDTO();
@@ -34,7 +39,7 @@ public class HelloApiController {
         DemoDTO demoDTO = new DemoDTO();
         demoDTO.setName("hou");
         System.out.println(name);
-        return "hou:"+key;
+        return blogUserBizService.get();
     }
 
     @PostMapping(value="/test3")
