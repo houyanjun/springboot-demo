@@ -1,18 +1,32 @@
 package com.example.demo.dao.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.util.Date;
-
+@Data
+@TableName("blog_user")
 public class BlogUserDO {
-    private Long id;
 
+    @TableField("id")
+    private Long id;
+    @TableField("user_name")
     private String userName;
 
+    @TableField("password")
+    private String password;
+
+    @TableField("sex")
     private Integer sex;
 
+    @TableField("create_time")
     private Date createTime;
 
+    @TableField("modify_time")
     private Date modifyTime;
 
+    @TableField("deleted")
     private Integer deleted;
 
     public Long getId() {
@@ -29,6 +43,14 @@ public class BlogUserDO {
 
     public void setUserName(String userName) {
         this.userName = userName == null ? null : userName.trim();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 
     public Integer getSex() {
