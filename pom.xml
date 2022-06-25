@@ -53,6 +53,10 @@
 		<latest.version>2021.1</latest.version>
 		<cloud.version>2.2.9.RELEASE</cloud.version>
 		<openfeign.verison>2.2.10.RELEASE</openfeign.verison>
+		<druid.version>1.1.9</druid.version>
+		<mybatis-plus.version>3.1.1</mybatis-plus.version>
+		<mybatis-plus-stater.version>3.1.2</mybatis-plus-stater.version>
+		<mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -125,22 +129,35 @@
 			<version>1.2.3</version>
 		</dependency>
 		<!--springboot 2.4版本后必须指定环境变量 spring.cloud.bootstrap.enabled=true，才能启用bootstrap.properties-->
+		<!--mybatis和SpringBoot整合包-->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.19</version>
+			<scope>runtime</scope>
 		</dependency>
-		<!--mybatis-plus-->
+		<!-- druid -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+		<!-- Mybatis-plus -->
 		<dependency>
 			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus</artifactId>
-			<version>3.3.2</version>
+			<artifactId>mybatisplus-spring-boot-starter</artifactId>
+			<version>${mybatisplus-spring-boot-starter.version}</version>
 		</dependency>
-		<!--mybatis和SpringBoot整合包-->
+		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
 		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.3.2</version>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatis-plus-stater.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shardingsphere</groupId>
+			<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+			<version>4.1.0</version>
 		</dependency>
 	</dependencies>
 
