@@ -11,21 +11,21 @@ spring:
       master:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/personal_blog_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://49.234.55.47:3306/personal_blog_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
         username: houyanjun
-        password: 123456
+        password: 123456dd$1
       blog-shard-0:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/personal_blog_db_0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://49.234.55.47:3306/personal_blog_db_0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
         username: houyanjun
-        password: 123456
+        password: 123456dd$1
       blog-shard-1:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/personal_blog_db_1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://49.234.55.47:3306/personal_blog_db_1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
         username: houyanjun
-        password: 123456
+        password: 123456dd$1
     props:
       sql:
         show: true
