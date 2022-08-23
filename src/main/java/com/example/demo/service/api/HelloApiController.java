@@ -7,12 +7,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hello")
 @RefreshScope
 public class HelloApiController {
+
+    //只支持redis五大类型中的字符串类型
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     private static final Logger logger = LoggerFactory.getLogger(HelloApiController.class);
 
@@ -27,6 +33,9 @@ public class HelloApiController {
 
     @PostMapping(value="/test")
     public DemoDTO hello() {
+        ValueOperations<String, String> valueRedis = stringRedisTemplate.opsForValue();
+        valueRedis.set("test","123");
+        System.out.println(valueRedis.get("test"));
         DemoDTO demoDTO = new DemoDTO();
         demoDTO.setName("hou");
         demoDTO.setName(name2);
