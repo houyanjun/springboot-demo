@@ -33,6 +33,7 @@ public class TemplateNetWorkUtil {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
     public <T> T executeGet(String serviceName,String api,Class<T> response) {
         String url = HTTP_PREFIX+serviceName+"/"+api;
         HttpHeaders headers = new HttpHeaders();
