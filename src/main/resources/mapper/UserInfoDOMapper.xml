@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.demo.dao.mapper.UserInfoDOMapper" >
-  <resultMap id="BaseResultMap" type="com.example.demo.dao.pojo.UserInfoDO" >
+<mapper namespace="com.ux168.platform.infrastructure.persistence.mysql.dao.mapper.UserInfoDOMapper" >
+  <resultMap id="BaseResultMap" type="com.ux168.platform.infrastructure.persistence.mysql.dao.pojo.UserInfoDO" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="user_name" property="userName" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -21,13 +21,13 @@
     delete from user_info
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.example.demo.dao.pojo.UserInfoDO" >
+  <insert id="insert" parameterType="com.ux168.platform.infrastructure.persistence.mysql.dao.pojo.UserInfoDO" >
     insert into user_info (id, user_name, password, 
       sex, createTime)
     values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{sex,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.example.demo.dao.pojo.UserInfoDO" >
+  <insert id="insertSelective" parameterType="com.ux168.platform.infrastructure.persistence.mysql.dao.pojo.UserInfoDO" >
     insert into user_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -64,7 +64,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.dao.pojo.UserInfoDO" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.ux168.platform.infrastructure.persistence.mysql.dao.pojo.UserInfoDO" >
     update user_info
     <set >
       <if test="userName != null" >
@@ -82,7 +82,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.demo.dao.pojo.UserInfoDO" >
+  <update id="updateByPrimaryKey" parameterType="com.ux168.platform.infrastructure.persistence.mysql.dao.pojo.UserInfoDO" >
     update user_info
     set user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

@@ -1,0 +1,1043 @@
+2022-09-06 15:35:49.662 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor[LocalConfigInfoProcessor.java:212] - LOCAL_SNAPSHOT_PATH:/Users/swinglittlepig/nacos/config
+2022-09-06 15:35:49.724 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:49.930 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:50.126 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:50.327 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:50.333 [main] ERROR com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:279] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=sfconfig.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: [NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:125)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:51)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:274)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:155)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadExtConfiguration(NacosPropertySourceLocator.java:128)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:102)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:35:50.335 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:166] - [fixed-localhost_8848] [get-config] get from server error, dataId=sfconfig.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:[NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+2022-09-06 15:35:50.335 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:170] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=sfconfig.properties, group=DEFAULT_GROUP, tenant=, config=
+2022-09-06 15:35:50.337 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[sfconfig.properties] & group[DEFAULT_GROUP]
+2022-09-06 15:35:50.342 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:50.541 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:50.751 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:50.941 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:50.942 [main] ERROR com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:279] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=springdemo, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: [NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:125)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:51)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:274)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:155)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:141)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:35:50.942 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:166] - [fixed-localhost_8848] [get-config] get from server error, dataId=springdemo, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:[NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+2022-09-06 15:35:50.942 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:170] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=springdemo, group=DEFAULT_GROUP, tenant=, config=
+2022-09-06 15:35:50.942 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo] & group[DEFAULT_GROUP]
+2022-09-06 15:35:50.943 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:51.148 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:51.347 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:51.544 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:51.544 [main] ERROR com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:279] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=springdemo.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: [NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:125)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:51)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:274)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:155)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:144)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:35:51.544 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:166] - [fixed-localhost_8848] [get-config] get from server error, dataId=springdemo.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:[NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+2022-09-06 15:35:51.544 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:170] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=springdemo.properties, group=DEFAULT_GROUP, tenant=, config=
+2022-09-06 15:35:51.545 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo.properties] & group[DEFAULT_GROUP]
+2022-09-06 15:35:51.546 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:51.750 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:51.948 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:52.150 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:35:52.150 [main] ERROR com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:279] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=springdemo-dev.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: [NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:125)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:51)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:274)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:155)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:149)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:35:52.151 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:166] - [fixed-localhost_8848] [get-config] get from server error, dataId=springdemo-dev.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:[NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+2022-09-06 15:35:52.151 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:170] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=springdemo-dev.properties, group=DEFAULT_GROUP, tenant=, config=
+2022-09-06 15:35:52.151 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo-dev.properties] & group[DEFAULT_GROUP]
+2022-09-06 15:35:52.152 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration[PropertySourceBootstrapConfiguration.java:112] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-springdemo-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-springdemo.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-springdemo,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sfconfig.properties,DEFAULT_GROUP'}]
+2022-09-06 15:35:52.160 [main] INFO  com.ux168.platform.Application[SpringApplication.java:652] - The following profiles are active: dev
+2022-09-06 15:35:53.653 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner[Logger.java:44] - No MyBatis mapper was found in '[com.demo.shardingjdbc.mapper]' package. Please check your configuration.
+2022-09-06 15:35:54.076 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 15:35:54.085 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-06 15:35:54.187 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 58ms. Found 0 Redis repository interfaces.
+2022-09-06 15:35:54.338 [com.alibaba.nacos.client.config.security.updater] ERROR com.alibaba.nacos.client.security.SecurityProxy[SecurityProxy.java:154] - [SecurityProxy] login http request failed url: http://localhost:8848/nacos/v1/auth/users/login, params: {username=nacos}, bodyMap: {password=nacos}, errorMsg: Connection refused (Connection refused)
+2022-09-06 15:35:54.585 [main] INFO  o.springframework.cloud.context.scope.GenericScope[GenericScope.java:295] - BeanFactory id=1bfd7ef7-377e-357b-a163-4cfa934c8120
+2022-09-06 15:35:54.652 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:54.669 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.sharding-org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:54.671 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.masterslave-org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:54.675 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.encrypt-org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:54.678 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.shadow-org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:54.681 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere-org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:55.072 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration$$EnhancerBySpringCGLIB$$67e7fb63] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:55.484 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:55.573 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:35:55.932 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer[TomcatWebServer.java:108] - Tomcat initialized with port(s): 9021 (http)
+2022-09-06 15:35:55.948 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:35:55.949 [main] INFO  org.apache.catalina.core.StandardService[DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-09-06 15:35:55.949 [main] INFO  org.apache.catalina.core.StandardEngine[DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-09-06 15:35:56.108 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-09-06 15:35:56.108 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext[ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 3917 ms
+2022-09-06 15:35:56.457 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-1} inited
+2022-09-06 15:35:57.536 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-2} inited
+2022-09-06 15:35:58.035 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-3} inited
+2022-09-06 15:35:58.710 [main] INFO  o.a.shardingsphere.core.log.ConfigurationLogger[ConfigurationLogger.java:104] - ShardingRuleConfiguration:
+defaultDataSourceName: master
+defaultDatabaseStrategy:
+  inline:
+    algorithmExpression: blog-shard-$->{id % 2}
+    shardingColumn: id
+tables:
+  user_info:
+    actualDataNodes: blog-shard-$->{0..1}.user_info_$->{0..2},
+    keyGenerator:
+      column: id
+      type: SNOWFLAKE
+    logicTable: user_info
+    tableStrategy:
+      inline:
+        algorithmExpression: user_info_$->{id % 3}
+        shardingColumn: id
+
+2022-09-06 15:35:58.711 [main] INFO  o.a.shardingsphere.core.log.ConfigurationLogger[ConfigurationLogger.java:104] - Properties:
+sql.show: 'true'
+
+2022-09-06 15:35:58.874 [main] INFO  ShardingSphere-metadata[ShardingMetaDataLoader.java:131] - Loading 1 logic tables' meta data.
+2022-09-06 15:35:59.152 [main] INFO  ShardingSphere-metadata[SchemaMetaDataLoader.java:70] - Loading 3 tables' meta data.
+2022-09-06 15:35:59.343 [com.alibaba.nacos.client.config.security.updater] ERROR com.alibaba.nacos.client.security.SecurityProxy[SecurityProxy.java:154] - [SecurityProxy] login http request failed url: http://localhost:8848/nacos/v1/auth/users/login, params: {username=nacos}, bodyMap: {password=nacos}, errorMsg: Connection refused (Connection refused)
+2022-09-06 15:35:59.810 [main] INFO  ShardingSphere-metadata[MultipleDataSourcesRuntimeContext.java:59] - Meta data load finished, cost 1098 milliseconds.
+2022-09-06 15:36:00.245 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod[AbstractMethod.java:306] - [com.ux168.platform.infrastructure.persistence.mysql.dao.mapper.UserInfoDOMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2022-09-06 15:36:00.423 [main] WARN  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2022-09-06 15:36:00.424 [main] INFO  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-06 15:36:00.430 [main] WARN  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2022-09-06 15:36:00.430 [main] INFO  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-06 15:36:00.755 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor[ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 15:36:00.830 [main] INFO  c.a.cloud.sentinel.SentinelWebAutoConfiguration[SentinelWebAutoConfiguration.java:80] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-09-06 15:36:01.012 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler[ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-09-06 15:36:02.153 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger[LoadBalancerCacheAutoConfiguration.java:86] - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-06 15:36:02.241 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:65] - initializer namespace from System Property :null
+2022-09-06 15:36:02.242 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:74] - initializer namespace from System Environment :null
+2022-09-06 15:36:02.243 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:84] - initializer namespace from System Property :null
+2022-09-06 15:36:02.274 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:341)
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:316)
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139)
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457)
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:123)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.275 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:341)
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:316)
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139)
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457)
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:123)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.276 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:341)
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:316)
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139)
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457)
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:123)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.276 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:552] - request: /nacos/v1/ns/instance/list failed, servers: [localhost:8848], code: 500, msg: Connection refused (Connection refused)
+2022-09-06 15:36:02.276 [main] ERROR com.alibaba.nacos.client.naming[HostReactor.java:343] - [NA] failed to update serviceName: DEFAULT_GROUP@@springdemo
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateServiceNow(HostReactor.java:341)
+	at com.alibaba.nacos.client.naming.core.HostReactor.getServiceInfo(HostReactor.java:316)
+	at com.alibaba.nacos.client.naming.core.HostReactor.subscribe(HostReactor.java:139)
+	at com.alibaba.nacos.client.naming.NacosNamingService.subscribe(NacosNamingService.java:457)
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:123)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.282 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:36:02.315 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer[TomcatWebServer.java:220] - Tomcat started on port(s): 9021 (http) with context path ''
+2022-09-06 15:36:02.319 [main] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:81] - [BEAT] adding beat: BeatInfo{port=9021, ip='119.130.105.101', weight=1.0, serviceName='DEFAULT_GROUP@@springdemo', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-09-06 15:36:02.321 [main] INFO  com.alibaba.nacos.client.naming[NamingProxy.java:230] - [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@springdemo with instance: Instance{instanceId='null', ip='119.130.105.101', port=9021, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-09-06 15:36:02.322 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:46)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.323 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:46)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.325 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:46)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.325 [main] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:552] - request: /nacos/v1/ns/instance failed, servers: [localhost:8848], code: 500, msg: Connection refused (Connection refused)
+2022-09-06 15:36:02.326 [main] ERROR c.a.cloud.nacos.registry.NacosServiceRegistry[NacosServiceRegistry.java:79] - nacos registry, springdemo register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='springdemo', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='119.130.105.101', networkInterface='', port=9021, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}},
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:212)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:74)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:78)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:46)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:36:02.327 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[AbstractApplicationContext.java:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is java.lang.reflect.UndeclaredThrowableException
+2022-09-06 15:36:02.352 [main] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-09-06 15:36:03.285 [com.alibaba.nacos.client.naming.updater] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:460)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-09-06 15:36:03.287 [com.alibaba.nacos.client.naming.updater] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:460)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-09-06 15:36:03.290 [com.alibaba.nacos.client.naming.updater] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:617] - [NA] failed to request
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984)
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:112)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482)
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:603)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:526)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:460)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-09-06 15:36:03.290 [com.alibaba.nacos.client.naming.updater] ERROR com.alibaba.nacos.client.naming[NamingProxy.java:552] - request: /nacos/v1/ns/instance/list failed, servers: [localhost:8848], code: 500, msg: Connection refused (Connection refused)
+2022-09-06 15:36:03.292 [com.alibaba.nacos.client.naming.updater] WARN  com.alibaba.nacos.client.naming[HostReactor.java:484] - [NA] failed to update serviceName: DEFAULT_GROUP@@springdemo
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance/list after all servers([localhost:8848]) tried: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:556)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:498)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:493)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.queryList(NamingProxy.java:407)
+	at com.alibaba.nacos.client.naming.core.HostReactor.updateService(HostReactor.java:378)
+	at com.alibaba.nacos.client.naming.core.HostReactor$UpdateTask.run(HostReactor.java:460)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-09-06 15:36:04.346 [com.alibaba.nacos.client.config.security.updater] ERROR com.alibaba.nacos.client.security.SecurityProxy[SecurityProxy.java:154] - [SecurityProxy] login http request failed url: http://localhost:8848/nacos/v1/auth/users/login, params: {username=nacos}, bodyMap: {password=nacos}, errorMsg: Connection refused (Connection refused)
+2022-09-06 15:36:04.534 [Thread-51] WARN  com.alibaba.nacos.common.notify.NotifyCenter[NotifyCenter.java:145] - [NotifyCenter] Start destroying Publisher
+2022-09-06 15:36:04.534 [Thread-13] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:108] - [HttpClientBeanHolder] Start destroying common HttpClient
+2022-09-06 15:36:04.535 [Thread-51] WARN  com.alibaba.nacos.common.notify.NotifyCenter[NotifyCenter.java:162] - [NotifyCenter] Destruction of the end
+2022-09-06 15:36:04.535 [Thread-13] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:114] - [HttpClientBeanHolder] Destruction of the end
+2022-09-06 15:47:09.582 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor[LocalConfigInfoProcessor.java:212] - LOCAL_SNAPSHOT_PATH:/Users/swinglittlepig/nacos/config
+2022-09-06 15:47:09.598 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:09.803 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:10.001 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:10.201 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:10.207 [main] ERROR com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:279] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=sfconfig.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: [NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:125)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:51)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:274)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:155)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadExtConfiguration(NacosPropertySourceLocator.java:128)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:102)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:47:10.209 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:166] - [fixed-localhost_8848] [get-config] get from server error, dataId=sfconfig.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:[NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+2022-09-06 15:47:10.210 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:170] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=sfconfig.properties, group=DEFAULT_GROUP, tenant=, config=
+2022-09-06 15:47:10.212 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[sfconfig.properties] & group[DEFAULT_GROUP]
+2022-09-06 15:47:10.214 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:10.416 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:10.615 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:10.814 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:10.815 [main] ERROR com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:279] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=springdemo, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: [NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:125)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:51)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:274)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:155)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:141)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:47:10.816 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:166] - [fixed-localhost_8848] [get-config] get from server error, dataId=springdemo, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:[NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+2022-09-06 15:47:10.816 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:170] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=springdemo, group=DEFAULT_GROUP, tenant=, config=
+2022-09-06 15:47:10.817 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo] & group[DEFAULT_GROUP]
+2022-09-06 15:47:10.819 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:11.019 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:11.221 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:11.424 [main] ERROR c.alibaba.nacos.client.config.http.ServerHttpAgent[ServerHttpAgent.java:109] - [NACOS ConnectException httpGet] currentServerAddr:http://localhost:8848, err : Connection refused (Connection refused)
+2022-09-06 15:47:11.424 [main] ERROR com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:279] - [fixed-localhost_8848] [sub-server] get server config exception, dataId=springdemo.properties, group=DEFAULT_GROUP, tenant=
+java.net.ConnectException: [NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpGet(ServerHttpAgent.java:125)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpGet(MetricsHttpAgent.java:51)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:274)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:155)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:144)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:47:11.425 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:166] - [fixed-localhost_8848] [get-config] get from server error, dataId=springdemo.properties, group=DEFAULT_GROUP, tenant=, msg=ErrCode:500, ErrMsg:[NACOS HTTP-GET] The maximum number of tolerable server reconnection errors has been reached
+2022-09-06 15:47:11.425 [main] WARN  com.alibaba.nacos.client.config.NacosConfigService[NacosConfigService.java:170] - [fixed-localhost_8848] [get-config] get snapshot ok, dataId=springdemo.properties, group=DEFAULT_GROUP, tenant=, config=
+2022-09-06 15:47:11.425 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo.properties] & group[DEFAULT_GROUP]
+2022-09-06 15:47:11.425 [main] ERROR c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:101] - get data from Nacos error,dataId:springdemo-spring.cloud.nacos.config.group=SPRING_DOMAIN_DEV;spring.cloud.nacos.config.namespace=302fa503-340b-4103-bab3-23b6a387b2a8;spring.cloud.nacos.discovery.group=SPRING_DOMAIN_DEV;spring.cloud.nacos.discovery.namespace=302fa503-340b-4103-bab3-23b6a387b2a8;spring.cloud.nacos.config.server-addr=49.234.55.47:8848;spring.cloud.nacos.discovery.server-addr=49.234.55.47:8848.properties 
+com.alibaba.nacos.api.exception.NacosException: dataId invalid
+	at com.alibaba.nacos.client.config.utils.ParamUtils.checkKeyParam(ParamUtils.java:90)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:136)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:98)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadApplicationConfiguration(NacosPropertySourceLocator.java:149)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:103)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:52)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:98)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:623)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:367)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236)
+	at com.ux168.platform.Application.main(Application.java:20)
+2022-09-06 15:47:11.427 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration[PropertySourceBootstrapConfiguration.java:112] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-springdemo-spring.cloud.nacos.config.group=SPRING_DOMAIN_DEV;spring.cloud.nacos.config.namespace=302fa503-340b-4103-bab3-23b6a387b2a8;spring.cloud.nacos.discovery.group=SPRING_DOMAIN_DEV;spring.cloud.nacos.discovery.namespace=302fa503-340b-4103-bab3-23b6a387b2a8;spring.cloud.nacos.config.server-addr=49.234.55.47:8848;spring.cloud.nacos.discovery.server-addr=49.234.55.47:8848.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-springdemo.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-springdemo,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-sfconfig.properties,DEFAULT_GROUP'}]
+2022-09-06 15:47:11.436 [main] INFO  com.ux168.platform.Application[SpringApplication.java:652] - The following profiles are active: spring.cloud.nacos.config.group=SPRING_DOMAIN_DEV;spring.cloud.nacos.config.namespace=302fa503-340b-4103-bab3-23b6a387b2a8;spring.cloud.nacos.discovery.group=SPRING_DOMAIN_DEV;spring.cloud.nacos.discovery.namespace=302fa503-340b-4103-bab3-23b6a387b2a8;spring.cloud.nacos.config.server-addr=49.234.55.47:8848;spring.cloud.nacos.discovery.server-addr=49.234.55.47:8848
+2022-09-06 15:47:12.068 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner[Logger.java:44] - No MyBatis mapper was found in '[com.demo.shardingjdbc.mapper]' package. Please check your configuration.
+2022-09-06 15:47:12.330 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 15:47:12.333 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-06 15:47:12.368 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2022-09-06 15:47:12.597 [main] INFO  o.springframework.cloud.context.scope.GenericScope[GenericScope.java:295] - BeanFactory id=1bfd7ef7-377e-357b-a163-4cfa934c8120
+2022-09-06 15:47:12.698 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:12.714 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.sharding-org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:12.717 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.masterslave-org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:12.721 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.encrypt-org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:12.724 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.shadow-org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:12.728 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere-org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:13.253 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration$$EnhancerBySpringCGLIB$$f4f6b65f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:13.629 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:13.693 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:47:14.049 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer[TomcatWebServer.java:108] - Tomcat initialized with port(s): 9021 (http)
+2022-09-06 15:47:14.062 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:47:14.063 [main] INFO  org.apache.catalina.core.StandardService[DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-09-06 15:47:14.063 [main] INFO  org.apache.catalina.core.StandardEngine[DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-09-06 15:47:14.231 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:108] - [HttpClientBeanHolder] Start destroying common HttpClient
+2022-09-06 15:47:14.233 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:114] - [HttpClientBeanHolder] Destruction of the end
+2022-09-06 15:47:14.242 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext[ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 2775 ms
+2022-09-06 15:47:14.495 [com.alibaba.nacos.client.config.security.updater] ERROR com.alibaba.nacos.client.security.SecurityProxy[SecurityProxy.java:154] - [SecurityProxy] login http request failed url: http://localhost:8848/nacos/v1/auth/users/login, params: {username=nacos}, bodyMap: {password=nacos}, errorMsg: Connection refused (Connection refused)
+2022-09-06 15:47:14.634 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-1} inited
+2022-09-06 15:47:15.704 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-2} inited
+2022-09-06 15:47:16.148 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-3} inited
+2022-09-06 15:47:16.683 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[AbstractApplicationContext.java:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoServiceImpl': Unsatisfied dependency expressed through field 'blogUserBizService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogUserBizService' defined in file [/Users/swinglittlepig/usr/local/github/springboot-demo/target/classes/com/ux168/platform/domain/blog/service/BlogUserBizService.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shardingDataSource' defined in class path resource [org/apache/shardingsphere/shardingjdbc/spring/boot/SpringBootConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'shardingDataSource' threw exception; nested exception is java.lang.IllegalStateException: Shutdown in progress
+2022-09-06 15:50:54.889 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor[LocalConfigInfoProcessor.java:212] - LOCAL_SNAPSHOT_PATH:/Users/swinglittlepig/nacos/config
+2022-09-06 15:50:54.942 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[sfconfig.properties] & group[DEFAULT_GROUP]
+2022-09-06 15:50:54.978 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo] & group[SPRING_DOMAIN_DEV]
+2022-09-06 15:50:55.012 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo.properties] & group[SPRING_DOMAIN_DEV]
+2022-09-06 15:50:55.049 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil[JvmUtil.java:49] - isMultiInstance:false
+2022-09-06 15:50:55.063 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration[PropertySourceBootstrapConfiguration.java:112] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-springdemo-dev.properties,SPRING_DOMAIN_DEV'}, BootstrapPropertySource {name='bootstrapProperties-springdemo.properties,SPRING_DOMAIN_DEV'}, BootstrapPropertySource {name='bootstrapProperties-springdemo,SPRING_DOMAIN_DEV'}, BootstrapPropertySource {name='bootstrapProperties-sfconfig.properties,DEFAULT_GROUP'}]
+2022-09-06 15:50:55.073 [main] INFO  com.ux168.platform.Application[SpringApplication.java:652] - The following profiles are active: dev
+2022-09-06 15:50:55.912 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner[Logger.java:44] - No MyBatis mapper was found in '[com.demo.shardingjdbc.mapper]' package. Please check your configuration.
+2022-09-06 15:50:56.356 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 15:50:56.362 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-06 15:50:56.407 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2022-09-06 15:50:56.743 [main] INFO  o.springframework.cloud.context.scope.GenericScope[GenericScope.java:295] - BeanFactory id=333c20aa-69af-3bbf-b7ca-1e6e1b206bb0
+2022-09-06 15:50:56.826 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:56.850 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.sharding-org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:56.853 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.masterslave-org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:56.858 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.encrypt-org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:56.862 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.shadow-org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:56.866 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere-org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:57.335 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration$$EnhancerBySpringCGLIB$$a2201b05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:58.000 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:58.102 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:50:58.571 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer[TomcatWebServer.java:108] - Tomcat initialized with port(s): 9021 (http)
+2022-09-06 15:50:58.589 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:50:58.590 [main] INFO  org.apache.catalina.core.StandardService[DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-09-06 15:50:58.590 [main] INFO  org.apache.catalina.core.StandardEngine[DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-09-06 15:50:58.777 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-09-06 15:50:58.778 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext[ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 3600 ms
+2022-09-06 15:50:59.299 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-1} inited
+2022-09-06 15:51:00.213 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-2} inited
+2022-09-06 15:51:00.730 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-3} inited
+2022-09-06 15:51:01.255 [main] INFO  o.a.shardingsphere.core.log.ConfigurationLogger[ConfigurationLogger.java:104] - ShardingRuleConfiguration:
+defaultDataSourceName: master
+defaultDatabaseStrategy:
+  inline:
+    algorithmExpression: blog-shard-$->{id % 2}
+    shardingColumn: id
+tables:
+  user_info:
+    actualDataNodes: blog-shard-$->{0..1}.user_info_$->{0..2},
+    keyGenerator:
+      column: id
+      type: SNOWFLAKE
+    logicTable: user_info
+    tableStrategy:
+      inline:
+        algorithmExpression: user_info_$->{id % 3}
+        shardingColumn: id
+
+2022-09-06 15:51:01.256 [main] INFO  o.a.shardingsphere.core.log.ConfigurationLogger[ConfigurationLogger.java:104] - Properties:
+sql.show: 'true'
+
+2022-09-06 15:51:01.401 [main] INFO  ShardingSphere-metadata[ShardingMetaDataLoader.java:131] - Loading 1 logic tables' meta data.
+2022-09-06 15:51:01.742 [main] INFO  ShardingSphere-metadata[SchemaMetaDataLoader.java:70] - Loading 3 tables' meta data.
+2022-09-06 15:51:02.310 [main] INFO  ShardingSphere-metadata[MultipleDataSourcesRuntimeContext.java:59] - Meta data load finished, cost 1053 milliseconds.
+2022-09-06 15:51:02.956 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod[AbstractMethod.java:306] - [com.ux168.platform.infrastructure.persistence.mysql.dao.mapper.UserInfoDOMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2022-09-06 15:51:03.236 [main] WARN  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2022-09-06 15:51:03.237 [main] INFO  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-06 15:51:03.247 [main] WARN  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2022-09-06 15:51:03.247 [main] INFO  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-06 15:51:03.586 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor[ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 15:51:03.674 [main] INFO  c.a.cloud.sentinel.SentinelWebAutoConfiguration[SentinelWebAutoConfiguration.java:80] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-09-06 15:51:03.875 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler[ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-09-06 15:51:04.998 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger[LoadBalancerCacheAutoConfiguration.java:86] - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-06 15:51:05.054 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:65] - initializer namespace from System Property :null
+2022-09-06 15:51:05.055 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:74] - initializer namespace from System Environment :null
+2022-09-06 15:51:05.057 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:84] - initializer namespace from System Property :null
+2022-09-06 15:51:05.252 [main] INFO  com.alibaba.nacos.client.naming[HostReactor.java:228] - new ips(1) service: SPRING_DOMAIN_DEV@@springdemo@@DEFAULT -> [{"instanceId":"10.0.4.17#9021#DEFAULT#SPRING_DOMAIN_DEV@@springdemo","ip":"10.0.4.17","port":9021,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SPRING_DOMAIN_DEV@@springdemo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-09-06 15:51:05.265 [main] INFO  com.alibaba.nacos.client.naming[HostReactor.java:267] - current ips:(1) service: SPRING_DOMAIN_DEV@@springdemo@@DEFAULT -> [{"instanceId":"10.0.4.17#9021#DEFAULT#SPRING_DOMAIN_DEV@@springdemo","ip":"10.0.4.17","port":9021,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SPRING_DOMAIN_DEV@@springdemo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-09-06 15:51:05.270 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:51:05.312 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer[TomcatWebServer.java:220] - Tomcat started on port(s): 9021 (http) with context path ''
+2022-09-06 15:51:05.317 [main] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:81] - [BEAT] adding beat: BeatInfo{port=9021, ip='119.130.105.101', weight=1.0, serviceName='SPRING_DOMAIN_DEV@@springdemo', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-09-06 15:51:05.319 [main] INFO  com.alibaba.nacos.client.naming[NamingProxy.java:230] - [REGISTER-SERVICE] 302fa503-340b-4103-bab3-23b6a387b2a8 registering service SPRING_DOMAIN_DEV@@springdemo with instance: Instance{instanceId='null', ip='119.130.105.101', port=9021, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-09-06 15:51:05.362 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry[NacosServiceRegistry.java:75] - nacos registry, SPRING_DOMAIN_DEV springdemo 119.130.105.101:9021 register finished
+2022-09-06 15:51:05.460 [main] INFO  o.s.cloud.openfeign.FeignClientFactoryBean[FeignClientFactoryBean.java:378] - For 'springdemo' URL not provided. Will try picking an instance via load-balancing.
+2022-09-06 15:51:05.532 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[AbstractApplicationContext.java:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scopedTarget.helloApiController': Unsatisfied dependency expressed through field 'blogUserBizService'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.ux168.platform.application.service.DemoService' available: expected single matching bean but found 2: demoServiceImpl,demoService
+2022-09-06 15:51:05.565 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry[NacosServiceRegistry.java:90] - De-registering from Nacos Server now...
+2022-09-06 15:51:05.566 [main] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:101] - [BEAT] removing beat: SPRING_DOMAIN_DEV@@springdemo:119.130.105.101:9021 from beat map.
+2022-09-06 15:51:05.567 [main] INFO  com.alibaba.nacos.client.naming[NamingProxy.java:260] - [DEREGISTER-SERVICE] 302fa503-340b-4103-bab3-23b6a387b2a8 deregistering service SPRING_DOMAIN_DEV@@springdemo with instance: Instance{instanceId='null', ip='119.130.105.101', port=9021, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-09-06 15:51:05.607 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry[NacosServiceRegistry.java:110] - De-registration finished.
+2022-09-06 15:51:05.607 [main] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-09-06 15:51:08.618 [main] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-09-06 15:51:08.619 [main] INFO  com.alibaba.nacos.client.naming[HostReactor.java:409] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-09-06 15:51:11.628 [main] INFO  com.alibaba.nacos.client.naming[PushReceiver.java:121] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-09-06 15:51:14.637 [main] INFO  com.alibaba.nacos.client.naming[PushReceiver.java:125] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-09-06 15:51:14.638 [main] INFO  com.alibaba.nacos.client.naming[FailoverReactor.java:132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-09-06 15:51:15.085 [main] INFO  com.alibaba.nacos.client.naming[FailoverReactor.java:134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-09-06 15:51:15.088 [main] INFO  com.alibaba.nacos.client.naming[HostReactor.java:414] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-09-06 15:51:15.089 [main] INFO  com.alibaba.nacos.client.naming[NamingProxy.java:719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-09-06 15:51:15.090 [main] WARN  com.alibaba.nacos.client.naming[NamingHttpClientManager.java:72] - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-09-06 15:51:15.092 [main] WARN  com.alibaba.nacos.client.naming[NamingHttpClientManager.java:79] - [NamingHttpClientManager] Destruction of the end
+2022-09-06 15:51:15.092 [main] INFO  c.alibaba.nacos.client.identify.CredentialWatcher[CredentialWatcher.java:105] - [null] CredentialWatcher is stopped
+2022-09-06 15:51:15.093 [main] INFO  c.alibaba.nacos.client.identify.CredentialService[CredentialService.java:98] - [null] CredentialService is freed
+2022-09-06 15:51:15.093 [main] INFO  com.alibaba.nacos.client.naming[NamingProxy.java:723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-09-06 15:51:15.096 [main] WARN  o.s.beans.factory.support.DisposableBeanAdapter[DisposableBeanAdapter.java:290] - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-09-06 15:51:15.097 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor[ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-09-06 15:51:15.109 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:1823] - {dataSource-1} closed
+2022-09-06 15:51:15.112 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:1823] - {dataSource-2} closed
+2022-09-06 15:51:15.116 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:1823] - {dataSource-3} closed
+2022-09-06 15:51:15.130 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:51:15.131 [main] INFO  org.apache.catalina.core.StandardService[DirectJDKLog.java:173] - Stopping service [Tomcat]
+2022-09-06 15:51:15.136 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:51:15.141 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:51:15.156 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener[ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-06 15:51:15.184 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter[LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field blogUserBizService in com.ux168.platform.interfaces.facade.web.test.HelloApiController required a single bean, but 2 were found:
+	- demoServiceImpl: defined in file [/Users/swinglittlepig/usr/local/github/springboot-demo/target/classes/com/ux168/platform/application/service/impl/DemoServiceImpl.class]
+	- demoService: defined in file [/Users/swinglittlepig/usr/local/github/springboot-demo/target/classes/com/ux168/platform/application/service/DemoService.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2022-09-06 15:56:19.744 [Thread-4] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:108] - [HttpClientBeanHolder] Start destroying common HttpClient
+2022-09-06 15:56:19.744 [Thread-16] WARN  com.alibaba.nacos.common.notify.NotifyCenter[NotifyCenter.java:145] - [NotifyCenter] Start destroying Publisher
+2022-09-06 15:56:19.779 [Thread-16] WARN  com.alibaba.nacos.common.notify.NotifyCenter[NotifyCenter.java:162] - [NotifyCenter] Destruction of the end
+2022-09-06 15:56:19.826 [Thread-4] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:114] - [HttpClientBeanHolder] Destruction of the end
+2022-09-06 15:56:36.480 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor[LocalConfigInfoProcessor.java:212] - LOCAL_SNAPSHOT_PATH:/Users/swinglittlepig/nacos/config
+2022-09-06 15:56:36.544 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[sfconfig.properties] & group[DEFAULT_GROUP]
+2022-09-06 15:56:36.595 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo] & group[SPRING_DOMAIN_DEV]
+2022-09-06 15:56:36.640 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder[NacosPropertySourceBuilder.java:87] - Ignore the empty nacos configuration and get it based on dataId[springdemo.properties] & group[SPRING_DOMAIN_DEV]
+2022-09-06 15:56:36.693 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil[JvmUtil.java:49] - isMultiInstance:false
+2022-09-06 15:56:36.733 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration[PropertySourceBootstrapConfiguration.java:112] - Located property source: [BootstrapPropertySource {name='bootstrapProperties-springdemo-dev.properties,SPRING_DOMAIN_DEV'}, BootstrapPropertySource {name='bootstrapProperties-springdemo.properties,SPRING_DOMAIN_DEV'}, BootstrapPropertySource {name='bootstrapProperties-springdemo,SPRING_DOMAIN_DEV'}, BootstrapPropertySource {name='bootstrapProperties-sfconfig.properties,DEFAULT_GROUP'}]
+2022-09-06 15:56:36.758 [main] INFO  com.ux168.platform.Application[SpringApplication.java:652] - The following profiles are active: dev
+2022-09-06 15:56:37.567 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner[Logger.java:44] - No MyBatis mapper was found in '[com.demo.shardingjdbc.mapper]' package. Please check your configuration.
+2022-09-06 15:56:37.969 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:249] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-06 15:56:37.974 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:127] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-06 15:56:38.014 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate[RepositoryConfigurationDelegate.java:187] - Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2022-09-06 15:56:38.487 [main] INFO  o.springframework.cloud.context.scope.GenericScope[GenericScope.java:295] - BeanFactory id=333c20aa-69af-3bbf-b7ca-1e6e1b206bb0
+2022-09-06 15:56:38.559 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'stringToNoneShardingStrategyConfigurationConverter' of type [org.apache.shardingsphere.spring.boot.converter.StringToNoneShardingStrategyConfigurationConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:38.579 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.sharding-org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:38.583 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.masterslave-org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:38.586 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.encrypt-org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.encrypt.SpringBootEncryptRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:38.590 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere.shadow-org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.shadow.SpringBootShadowRuleConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:38.593 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.shardingsphere-org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.common.SpringBootPropertiesConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:39.104 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration' of type [org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration$$EnhancerBySpringCGLIB$$fddb2da9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:39.730 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:39.850 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker[PostProcessorRegistrationDelegate.java:335] - Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-06 15:56:40.320 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer[TomcatWebServer.java:108] - Tomcat initialized with port(s): 9021 (http)
+2022-09-06 15:56:40.336 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:56:40.337 [main] INFO  org.apache.catalina.core.StandardService[DirectJDKLog.java:173] - Starting service [Tomcat]
+2022-09-06 15:56:40.338 [main] INFO  org.apache.catalina.core.StandardEngine[DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-09-06 15:56:40.571 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2022-09-06 15:56:40.572 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext[ServletWebServerApplicationContext.java:285] - Root WebApplicationContext: initialization completed in 3751 ms
+2022-09-06 15:56:41.182 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-1} inited
+2022-09-06 15:56:42.149 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-2} inited
+2022-09-06 15:56:42.619 [main] INFO  com.alibaba.druid.pool.DruidDataSource[DruidDataSource.java:928] - {dataSource-3} inited
+2022-09-06 15:56:43.164 [main] INFO  o.a.shardingsphere.core.log.ConfigurationLogger[ConfigurationLogger.java:104] - ShardingRuleConfiguration:
+defaultDataSourceName: master
+defaultDatabaseStrategy:
+  inline:
+    algorithmExpression: blog-shard-$->{id % 2}
+    shardingColumn: id
+tables:
+  user_info:
+    actualDataNodes: blog-shard-$->{0..1}.user_info_$->{0..2},
+    keyGenerator:
+      column: id
+      type: SNOWFLAKE
+    logicTable: user_info
+    tableStrategy:
+      inline:
+        algorithmExpression: user_info_$->{id % 3}
+        shardingColumn: id
+
+2022-09-06 15:56:43.165 [main] INFO  o.a.shardingsphere.core.log.ConfigurationLogger[ConfigurationLogger.java:104] - Properties:
+sql.show: 'true'
+
+2022-09-06 15:56:43.297 [main] INFO  ShardingSphere-metadata[ShardingMetaDataLoader.java:131] - Loading 1 logic tables' meta data.
+2022-09-06 15:56:43.648 [main] INFO  ShardingSphere-metadata[SchemaMetaDataLoader.java:70] - Loading 3 tables' meta data.
+2022-09-06 15:56:44.361 [main] INFO  ShardingSphere-metadata[MultipleDataSourcesRuntimeContext.java:59] - Meta data load finished, cost 1196 milliseconds.
+2022-09-06 15:56:45.001 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod[AbstractMethod.java:306] - [com.ux168.platform.infrastructure.persistence.mysql.dao.mapper.UserInfoDOMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2022-09-06 15:56:45.269 [main] WARN  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2022-09-06 15:56:45.269 [main] INFO  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-06 15:56:45.278 [main] WARN  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2022-09-06 15:56:45.278 [main] INFO  com.netflix.config.sources.URLConfigurationSource[URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-06 15:56:45.676 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor[ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-06 15:56:45.785 [main] INFO  c.a.cloud.sentinel.SentinelWebAutoConfiguration[SentinelWebAutoConfiguration.java:80] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2022-09-06 15:56:45.996 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler[ExecutorConfigurationSupport.java:181] - Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-09-06 15:56:47.764 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger[LoadBalancerCacheAutoConfiguration.java:86] - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-06 15:56:48.048 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:65] - initializer namespace from System Property :null
+2022-09-06 15:56:48.049 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:74] - initializer namespace from System Environment :null
+2022-09-06 15:56:48.049 [main] INFO  com.alibaba.nacos.client.naming[InitUtils.java:84] - initializer namespace from System Property :null
+2022-09-06 15:56:48.335 [main] INFO  com.alibaba.nacos.client.naming[HostReactor.java:228] - new ips(1) service: SPRING_DOMAIN_DEV@@springdemo@@DEFAULT -> [{"instanceId":"10.0.4.17#9021#DEFAULT#SPRING_DOMAIN_DEV@@springdemo","ip":"10.0.4.17","port":9021,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SPRING_DOMAIN_DEV@@springdemo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-09-06 15:56:48.381 [main] INFO  com.alibaba.nacos.client.naming[HostReactor.java:267] - current ips:(1) service: SPRING_DOMAIN_DEV@@springdemo@@DEFAULT -> [{"instanceId":"10.0.4.17#9021#DEFAULT#SPRING_DOMAIN_DEV@@springdemo","ip":"10.0.4.17","port":9021,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SPRING_DOMAIN_DEV@@springdemo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-09-06 15:56:48.388 [main] INFO  org.apache.coyote.http11.Http11NioProtocol[DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-9021"]
+2022-09-06 15:56:48.439 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer[TomcatWebServer.java:220] - Tomcat started on port(s): 9021 (http) with context path ''
+2022-09-06 15:56:48.462 [main] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:81] - [BEAT] adding beat: BeatInfo{port=9021, ip='119.130.105.101', weight=1.0, serviceName='SPRING_DOMAIN_DEV@@springdemo', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-09-06 15:56:48.468 [main] INFO  com.alibaba.nacos.client.naming[NamingProxy.java:230] - [REGISTER-SERVICE] 302fa503-340b-4103-bab3-23b6a387b2a8 registering service SPRING_DOMAIN_DEV@@springdemo with instance: Instance{instanceId='null', ip='119.130.105.101', port=9021, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-09-06 15:56:48.527 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry[NacosServiceRegistry.java:75] - nacos registry, SPRING_DOMAIN_DEV springdemo 119.130.105.101:9021 register finished
+2022-09-06 15:56:48.690 [main] INFO  o.s.cloud.openfeign.FeignClientFactoryBean[FeignClientFactoryBean.java:378] - For 'springdemo' URL not provided. Will try picking an instance via load-balancing.
+2022-09-06 15:56:48.756 [main] INFO  com.ux168.platform.Application[StartupInfoLogger.java:61] - Started Application in 16.693 seconds (JVM running for 19.434)
+2022-09-06 15:56:48.763 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:239] - [fixed-49.234.55.47_8848-302fa503-340b-4103-bab3-23b6a387b2a8] [subscribe] springdemo-dev.properties+SPRING_DOMAIN_DEV+302fa503-340b-4103-bab3-23b6a387b2a8
+2022-09-06 15:56:48.765 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData[CacheData.java:93] - [fixed-49.234.55.47_8848-302fa503-340b-4103-bab3-23b6a387b2a8] [add-listener] ok, tenant=302fa503-340b-4103-bab3-23b6a387b2a8, dataId=springdemo-dev.properties, group=SPRING_DOMAIN_DEV, cnt=1
+2022-09-06 15:56:48.766 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:239] - [fixed-49.234.55.47_8848-302fa503-340b-4103-bab3-23b6a387b2a8] [subscribe] springdemo+SPRING_DOMAIN_DEV+302fa503-340b-4103-bab3-23b6a387b2a8
+2022-09-06 15:56:48.766 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData[CacheData.java:93] - [fixed-49.234.55.47_8848-302fa503-340b-4103-bab3-23b6a387b2a8] [add-listener] ok, tenant=302fa503-340b-4103-bab3-23b6a387b2a8, dataId=springdemo, group=SPRING_DOMAIN_DEV, cnt=1
+2022-09-06 15:56:48.767 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker[ClientWorker.java:239] - [fixed-49.234.55.47_8848-302fa503-340b-4103-bab3-23b6a387b2a8] [subscribe] springdemo.properties+SPRING_DOMAIN_DEV+302fa503-340b-4103-bab3-23b6a387b2a8
+2022-09-06 15:56:48.767 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData[CacheData.java:93] - [fixed-49.234.55.47_8848-302fa503-340b-4103-bab3-23b6a387b2a8] [add-listener] ok, tenant=302fa503-340b-4103-bab3-23b6a387b2a8, dataId=springdemo.properties, group=SPRING_DOMAIN_DEV, cnt=1
+2022-09-06 15:56:49.454 [com.alibaba.nacos.client.naming.updater] INFO  com.alibaba.nacos.client.naming[HostReactor.java:228] - new ips(1) service: SPRING_DOMAIN_DEV@@springdemo@@DEFAULT -> [{"instanceId":"119.130.105.101#9021#DEFAULT#SPRING_DOMAIN_DEV@@springdemo","ip":"119.130.105.101","port":9021,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SPRING_DOMAIN_DEV@@springdemo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-09-06 15:56:49.455 [com.alibaba.nacos.client.naming.updater] INFO  com.alibaba.nacos.client.naming[HostReactor.java:267] - current ips:(2) service: SPRING_DOMAIN_DEV@@springdemo@@DEFAULT -> [{"instanceId":"10.0.4.17#9021#DEFAULT#SPRING_DOMAIN_DEV@@springdemo","ip":"10.0.4.17","port":9021,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SPRING_DOMAIN_DEV@@springdemo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000},{"instanceId":"119.130.105.101#9021#DEFAULT#SPRING_DOMAIN_DEV@@springdemo","ip":"119.130.105.101","port":9021,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SPRING_DOMAIN_DEV@@springdemo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-09-06 15:58:05.143 [http-nio-9021-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-06 15:58:05.144 [http-nio-9021-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet[FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2022-09-06 15:58:05.215 [http-nio-9021-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet[FrameworkServlet.java:547] - Completed initialization in 70 ms
+2022-09-06 15:58:12.241 [Thread-16] WARN  com.alibaba.nacos.common.notify.NotifyCenter[NotifyCenter.java:145] - [NotifyCenter] Start destroying Publisher
+2022-09-06 15:58:12.242 [Thread-4] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:108] - [HttpClientBeanHolder] Start destroying common HttpClient
+2022-09-06 15:58:12.242 [Thread-16] WARN  com.alibaba.nacos.common.notify.NotifyCenter[NotifyCenter.java:162] - [NotifyCenter] Destruction of the end
+2022-09-06 15:58:12.242 [Thread-4] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder[HttpClientBeanHolder.java:114] - [HttpClientBeanHolder] Destruction of the end
+2022-09-06 15:58:12.300 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler[ExecutorConfigurationSupport.java:218] - Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-09-06 15:58:12.494 [SpringContextShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry[NacosServiceRegistry.java:90] - De-registering from Nacos Server now...
+2022-09-06 15:58:12.496 [SpringContextShutdownHook] INFO  com.alibaba.nacos.client.naming[BeatReactor.java:101] - [BEAT] removing beat: SPRING_DOMAIN_DEV@@springdemo:119.130.105.101:9021 from beat map.
